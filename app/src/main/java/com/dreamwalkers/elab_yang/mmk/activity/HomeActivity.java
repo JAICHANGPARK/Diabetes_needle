@@ -1,6 +1,5 @@
 package com.dreamwalkers.elab_yang.mmk.activity;
 
-import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -27,13 +26,11 @@ import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentA;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentB;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentC;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentD;
-import com.dreamwalkers.elab_yang.mmk.activity.sync.needle.v1.SelectDrugFirstActivity2;
+import com.dreamwalkers.elab_yang.mmk.activity.select.SelectDrugActivity;
 import com.dreamwalkers.elab_yang.mmk.menu.DrawerAdapter;
 import com.dreamwalkers.elab_yang.mmk.menu.DrawerItem;
 import com.dreamwalkers.elab_yang.mmk.menu.SimpleItem;
 import com.dreamwalkers.elab_yang.mmk.menu.SpaceItem;
-
-import org.jetbrains.anko.AlertDialogBuilder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -124,6 +121,7 @@ public class HomeActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
             case POS_ACCOUNT:
                 Log.d(TAG, "onItemSelected: POS_ACCOUNT");
+                startActivity(new Intent(this, SelectDrugActivity.class));
                 break;
 
             // TODO: 2018-11-19 인슐린 설정은 여기서 ㄱㄱㄱㄱㄱㄱㄱ
